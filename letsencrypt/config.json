@@ -79,5 +79,5 @@
       "transip_api_key": "str?"
     }
   },
-  "image": "homeassistant/{arch}-addon-letsencrypt"
+  "image": "kylewlacy/ha-{arch}-addon-letsencrypt"
 }
