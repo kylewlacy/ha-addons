@@ -53,7 +53,7 @@
       "linode_version": "str?",
       "luadns_email": "email?",
       "luadns_token": "str?",
-      "namecheap_api_user": "str?",
+      "namecheap_username": "str?",
       "namecheap_api_key": "str?",
       "njalla_token": "str?",
       "nsone_api_key": "str?",
