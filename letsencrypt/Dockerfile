@@ -18,6 +18,8 @@ RUN apk add --no-cache --update \
         libffi-dev \
         musl-dev \
         openssl-dev \
+        git \
+    && git clone https://github.com/schubc/certbot-dns-namecheap.git \
     && pip3 install --no-cache-dir --find-links \
         "https://wheels.home-assistant.io/alpine-$(cut -d '.' -f 1-2 < /etc/alpine-release)/${BUILD_ARCH}/" \
         certbot==${CERTBOT_VERSION} \
@@ -31,6 +33,7 @@ RUN apk add --no-cache --update \
         certbot-dns-google==${CERTBOT_VERSION} \
         certbot-dns-linode==${CERTBOT_VERSION} \
         certbot-dns-luadns==${CERTBOT_VERSION} \
+        certbot-dns-ne
         certbot-dns-njalla==${CERTBOT_NJALLA_VERSION} \
         certbot-dns-nsone==${CERTBOT_VERSION} \
         certbot-dns-ovh==${CERTBOT_VERSION} \
@@ -40,6 +43,7 @@ RUN apk add --no-cache --update \
         certbot-dns-netcup==${CERTBOT_NETCUP_VERSION} \
         certbot-plugin-gandi==${CERTBOT_GANDI_VERSION} \
         certbot-dns-transip==${CERTBOT_DNS_TRANSIP_VERSION} \
+    && pip install certbot-dns-namecheap/ \
     && apk del .build-dependencies
 
 # Copy data
