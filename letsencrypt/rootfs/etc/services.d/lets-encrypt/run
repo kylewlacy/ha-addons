@@ -96,10 +96,11 @@ elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-njalla" ]; then
     bashio::config.require 'dns.njalla_token'
     PROVIDER_ARGUMENTS+=("--authenticator" "certbot-dns-njalla:dns-njalla" "--certbot-dns-njalla:dns-njalla-credentials" /data/dnsapikey "--certbot-dns-njalla:dns-njalla-propagation-seconds" "${PROPAGATION_SECONDS}")
 
+# Namecheap
 elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-namecheap" ]; then
     bashio::config.require 'dns.namecheap_username'
     bashio::config.require 'dns.namecheap_api_key'
-    PROVIDER_ARGUMENTS+=("--authenticator" "certbot-dns-namecheap:dns-namecheap" "--certbot_dns_namecheap:dns-namecheap-credentials " /data/dnsapikey "--certbot-dns-namecheap:dns-namecheap-propagation-seconds" "${PROPAGATION_SECONDS}")
+    PROVIDER_ARGUMENTS+=("--authenticator" "certbot-dns-namecheap:dns-namecheap" "--certbot-dns-namecheap:dns-namecheap-credentials " /data/dnsapikey "--certbot-dns-namecheap:dns-namecheap-propagation-seconds" "${PROPAGATION_SECONDS}")
 
 #All others
 else
