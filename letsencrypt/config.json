@@ -1,6 +1,6 @@
 {
   "name": "Let's Encrypt (with Namecheap)",
-  "version": "4.11.3",
+  "version": "4.11.4",
   "slug": "letsencrypt-namecheap",
   "description": "Manage certificate from Let's Encrypt",
   "url": "https://github.com/home-assistant/hassio-addons/tree/master/letsencrypt",
