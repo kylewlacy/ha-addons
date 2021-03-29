@@ -126,7 +126,7 @@ echo "$DOMAINS" > /data/domains.gen
 
 # Generate a new certificate if necessary or expand a previous certificate if domains has changed
 if [ "$CHALLENGE" == "dns" ]; then
-    certbot certonly --non-interactive --keep-until-expiring --expand \
+    certbot certonly --debug -vvv --non-interactive --keep-until-expiring --expand \
         --email "$EMAIL" --agree-tos \
         --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" \
         --preferred-challenges "$CHALLENGE" "${DOMAIN_ARR[@]}" "${PROVIDER_ARGUMENTS[@]}"
